@@ -12,5 +12,9 @@ and configurations. Thereafter, it calculates the mean of all runs
 for all configurations. 
 
 
+This repository refers to the Lagrangian Parcel Model:
+https://github.com/faho-clouds/particle_model
+
+
 
 
