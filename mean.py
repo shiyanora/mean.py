@@ -14,7 +14,7 @@ def find(files, string, list):
             pass
 
 
-# Ask for directory and get filelist:                           # for testing: /home/erika/python/dir
+# Ask for directory and get filelist:                          
 c = True
 while c:
     dir_in = input("Type directory or type 'here': ")
