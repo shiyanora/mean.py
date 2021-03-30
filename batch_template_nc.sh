@@ -87,9 +87,9 @@ do
          fi
 
          make -f particle.make run
-         ncl /home/erika/Dokumente/MA/particle_model/time_series_2_nc.ncl
-         ncl /home/erika/Dokumente/MA/particle_model/spectra_2_nc.ncl
-         ncl /home/erika/Dokumente/MA/particle_model/1D_LEM_2_nc.ncl
+         ncl ${base_name}/time_series_2_nc.ncl
+         ncl ${base_name}/spectra_2_nc.ncl
+         ncl ${base_name}/1D_LEM_2_nc.ncl
          
       done
 
