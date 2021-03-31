@@ -117,7 +117,8 @@ for n in conf:
 
     # Create output file:
     try:
-        out_dir = os.mkdir(dir + "/mean_output/")
+        os.mkdir(dir + "/mean_output/")
+        out_dir = dir + "/mean_output/"
     except:
         out_dir = dir + "/mean_output/"
     new_file = (out_dir + fn + strings[n-1] + 'mean.nc')
