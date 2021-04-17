@@ -14,7 +14,7 @@ def find(files, string, list):
             pass
 
 
-# Ask for directory and get filelist:                          
+# Ask for directory and get filelist:                           
 c = True
 while c:
     dir_in = input("Type directory or type 'here': ")
@@ -83,6 +83,21 @@ for s in lfn_1:
     strings.append(s[len(fn):(len(s)-12)])
 
 
+# Create mean_output directory:
+try:
+    os.mkdir(dir + "/mean_output/")
+    out_dir = dir + "/mean_output/"
+except:
+    out_dir = dir + "/mean_output/"
+
+# Create fn directory:
+try:
+    os.mkdir(dir + "/mean_output/" + fn + "/")
+    out_dir = dir + "/mean_output/" + fn + "/"
+except:
+    out_dir = dir + "/mean_output/" + fn + "/"
+
+
 # Configuration loop:
 for n in conf:
     lfn_temp = []
@@ -116,11 +131,6 @@ for n in conf:
 
 
     # Create output file:
-    try:
-        os.mkdir(dir + "/mean_output/")
-        out_dir = dir + "/mean_output/"
-    except:
-        out_dir = dir + "/mean_output/"
     new_file = (out_dir + fn + strings[n-1] + 'mean.nc')
     print('Creating', new_file)
     new_data = nc.Dataset(new_file, "w", format="NETCDF3_CLASSIC")
@@ -147,3 +157,5 @@ for n in conf:
 
     # Close the output file:
     new_data.close()
+
+
